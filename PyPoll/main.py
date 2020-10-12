@@ -1,10 +1,3 @@
-#Psuedo Code Plan
-#Sum of votes cast
-#Loop to find unique candidates
-#Variable for votes for each candidate
-#Divide votes for each by candidate by total votes
-# Who go thte most votes 
-
 #Importing CSV data
 
 import os
@@ -51,16 +44,30 @@ CorreyVote = round(int(Candidates["Correy"]), 3)
 LiVote = round(int(Candidates["Li"]), 3)
 OTooleyVote = round(int(Candidates["O'Tooley"]), 3)
 
-#OutPut
+#Readout
 
-print(f"Election Result")
-print(f"---------------------------------------")
-print(f"Total Votes: {TotalVotes}")
-print(f"---------------------------------------")
-print(f"Khan: {KhanVotePercent} ({KhanVote})")
-print(f"Correy: {CorreyVotePercent} ({CorreyVote})")
-print(f"Li: {LiVotePercent} ({LiVote})")
-print(f"O'Tooley: {OTooleyVotePercent} ({OTooleyVote})")
-print(f"---------------------------------------")
-print(f"Winner: Khan")
-print(f"---------------------------------------")
+output = (
+    f"Election Result\n"
+    f"---------------------------------------\n"
+    f"Total Votes: {TotalVotes}\n"
+    f"---------------------------------------\n"
+    f"Khan: {KhanVotePercent} ({KhanVote})\n"
+    f"Correy: {CorreyVotePercent} ({CorreyVote})\n"
+    f"Li: {LiVotePercent} ({LiVote})\n"
+    f"O'Tooley: {OTooleyVotePercent} ({OTooleyVote})\n"
+    f"---------------------------------------\n"
+    f"Winner: Khan\n"
+    f"---------------------------------------\n")
+print(output)
+
+# Export to .txt
+File_Object = open(r"C:\Users\Calvin Bauer\python-challenge\PyPoll\Analysis\Analysis.txt","w")
+File_Object.write (output)
+
+
+#Psuedo Code Plan
+#Sum of votes cast
+#Loop to find unique candidates
+#Variable for votes for each candidate
+#Divide votes for each by candidate by total votes
+# Who go thte most votes 
