@@ -35,12 +35,9 @@ totalchangeinprofit = sum(changeinProfit)
 monthchangecount = len(changeinProfit)
 averagechangeinprofit = round(totalchangeinprofit / monthchangecount, 2)
 
-
-
 # Max and Min
 MinProfit = min(changeinProfit)
 MaxProfit = max(changeinProfit)
-
 
 # Readout
 
@@ -62,7 +59,6 @@ File_Object.write (f"Greatest Increase in Profits: Feb-2012 (${MaxProfit})\n")
 File_Object.write (f"Greatest Decrease in Profits: Sep-2013 (${MinProfit})\n")
 
 
-
 #Psuedo Code Plan
 #Loop through months and make a list
 #Count months in this list
@@ -72,6 +68,3 @@ File_Object.write (f"Greatest Decrease in Profits: Sep-2013 (${MinProfit})\n")
 # Index location with a variable for each
 # use variable to look up month from month list
 # print out a nice output in terminal and a text file
-
-
-

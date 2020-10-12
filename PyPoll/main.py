@@ -61,6 +61,7 @@ output = (
 print(output)
 
 # Export to .txt
+
 File_Object = open(r"C:\Users\Calvin Bauer\python-challenge\PyPoll\Analysis\Analysis.txt","w")
 File_Object.write (output)
 
@@ -70,4 +71,5 @@ File_Object.write (output)
 #Loop to find unique candidates
 #Variable for votes for each candidate
 #Divide votes for each by candidate by total votes
-# Who go thte most votes 
+# Who got the most votes
+# print out a nice output in terminal and a text file
