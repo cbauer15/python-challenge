@@ -49,7 +49,7 @@ print(f"Average Change: ${averagechangeinprofit}")
 print(f"Greatest Increase in Profits: Feb-2012 (${MaxProfit})")
 print(f"Greatest Decrease in Profits: Sep-2013 (${MinProfit})")
 
-
+# Export to .txt
 File_Object = open(r"C:\Users\Calvin Bauer\python-challenge\PyBank\Analysis\Analysis.txt","w")
 File_Object.write ("Financial Analysis\n")
 File_Object.write ("----------------------------------\n")
@@ -60,6 +60,8 @@ File_Object.write (f"Greatest Increase in Profits: Feb-2012 (${MaxProfit})\n")
 File_Object.write (f"Greatest Decrease in Profits: Sep-2013 (${MinProfit})\n")
 
 
+
+#Psuedo Code Plan
 #Loop through months and make a list
 #Count months in this list
 #Add up totals from profit column
