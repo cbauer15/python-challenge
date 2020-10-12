@@ -6,6 +6,7 @@ import csv
 csvpath = os.path.join(os.path.abspath(__file__),'..','Resources','budget_data.csv')
 
 # Count Months and Total Proft/Loss from CSV
+
 months = []
 profitlist = []
 profitvloss = 0
@@ -50,6 +51,7 @@ print(f"Greatest Increase in Profits: Feb-2012 (${MaxProfit})")
 print(f"Greatest Decrease in Profits: Sep-2013 (${MinProfit})")
 
 # Export to .txt
+
 File_Object = open(r"C:\Users\Calvin Bauer\python-challenge\PyBank\Analysis\Analysis.txt","w")
 File_Object.write ("Financial Analysis\n")
 File_Object.write ("----------------------------------\n")
