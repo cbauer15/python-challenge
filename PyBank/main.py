@@ -9,7 +9,7 @@ profitvloss = 0
 MinProfitIndex = 0
 MaxProfitIndex = 0
 
-
+# Count Months and Total Proft/Loss
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
@@ -18,14 +18,26 @@ with open(csvpath) as csvfile:
         months = months + [row[0]]
         profitvloss = profitvloss + float(row[1])
         profitlist = profitlist + [row[1]]
-        
-        
+    
 countofmonths = len(months)
 countofprofit = len(profitlist)
-averageprofit = profitvloss / countofprofit
 print(countofmonths)
 print(profitvloss)
-print(averageprofit)
+
+# Change in Proft/Loss
+
+changeinProfit = []
+monthchange = 0    
+    
+for i in range(1, len(profitlist)):
+    monthchange = int(profitlist[i]) - int(profitlist[i - 1])
+    changeinProfit.append(monthchange)
+
+totalchangeinprofit = sum(changeinProfit)
+monthchangecount = len(changeinProfit)
+averagechangeinprofit = round(totalchangeinprofit / monthchangecount, 2)
+print(averagechangeinprofit)
+#print(averageprofit)
 
 
 
