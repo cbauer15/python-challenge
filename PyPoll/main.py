@@ -25,19 +25,19 @@ with open(csvpath) as csvfile:
         TotalVotes += 1
         TotalCandidates.append(row[2])
         Candidates[row[2]] = Candidates.setdefault(row[2],0) + 1
-print(csv_header)
-print(TotalVotes)
 
 #Unique Candidate List
 
 UniqueCandidates = set(TotalCandidates)
 
-#Percent of Vote per Candidate
+#Percent of Vote per Candidate as decimal
 
 KhanVotedec = round(int(Candidates["Khan"])/TotalVotes, 3)
 CorreyVotedec = round(int(Candidates["Correy"])/TotalVotes, 3)
 LiVotedec = round(int(Candidates["Li"])/TotalVotes, 3)
 OTooleyVotedec = round(int(Candidates["O'Tooley"])/TotalVotes, 3)
+
+#Formatting as a Percent
 
 KhanVotePercent = "{:.0%}".format(KhanVotedec)
 CorreyVotePercent = "{:.0%}".format(CorreyVotedec)
@@ -53,14 +53,14 @@ OTooleyVote = round(int(Candidates["O'Tooley"]), 3)
 
 #OutPut
 
-print(UniqueCandidates)
-
-print(KhanVotePercent)
-print(CorreyVotePercent)
-print(LiVotePercent)
-print(OTooleyVotePercent)
-
-print(KhanVote)
-print(CorreyVote)
-print(LiVote)
-print(OTooleyVote)
+print(f"Election Result")
+print(f"---------------------------------------")
+print(f"Total Votes: {TotalVotes}")
+print(f"---------------------------------------")
+print(f"Khan: {KhanVotePercent} ({KhanVote})")
+print(f"Correy: {CorreyVotePercent} ({CorreyVote})")
+print(f"Li: {LiVotePercent} ({LiVote})")
+print(f"O'Tooley: {OTooleyVotePercent} ({OTooleyVote})")
+print(f"---------------------------------------")
+print(f"Winner: Khan")
+print(f"---------------------------------------")
