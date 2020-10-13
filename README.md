@@ -1,4 +1,4 @@
-# python-challenge
+# python-challenge - 10.12.2020
 Python Homework
 This was an activity in which we used python to first access CSVs and then perfrom analysis.
 The first activity, PyBank, required us to analyze a company's Profits/Losses.  These Profits/Losses were tracked on a monthly basis and broke into to columns, month/date and Profit/Loss.  We then also determined the total profit/loss, the average change of profit per month, and the Max/Min profit/losses.
